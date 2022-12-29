@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="69">
+    <author>VertexFloat</author>
+    <version>1.0.0.2</version>
+    <title>
+        <en>No More Auto Lift</en>
+        <de>Kein Autolift Mehr</de>
+        <pl>Koniec Z Automatycznym Podnoszeniem</pl>
+    </title>
+    <iconFilename>icon.png</iconFilename>
+    <multiplayer supported="true"/>
+
+    <description>
+<en>
+<![CDATA[Thanks to this simple modification, the implements remains on the ground when attached.
+
+Changelog (1.0.0.1) :
+- improved attach behavior when header is on header trailer
+
+Changelog (1.0.0.2) :
+- improved and optimized code
+- new game screenshots
+- descVersion updated
+- minor bugs fixed
+- new mod icon
+]]>
+</en>
+<de>
+<![CDATA[Dank dieser einfachen Modifikation bleiben die Anbaugeräte im angebauten Zustand am Boden.
+
+Änderungsprotokoll (1.0.0.1) :
+- Verbessertes Attach-Verhalten, wenn sich der Schneidwerk auf dem Anhänger befindet
+
+Änderungsprotokoll (1.0.0.2) :
+- verbesserter und optimierter Code
+- descVersion aktualisiert
+- neue Spiel-Screenshots
+- kleine Fehler behoben
+- Neues Mod-Symbol
+]]>
+</de>
+<pl>
+<![CDATA[Dzięki tej prostej modyfikacji narzędzia pozostają na ziemi po zamocowaniu.
+
+Dziennik zmian (1.0.0.1) :
+- ulepszone zachowanie przyczepiania, gdy heder znajduje się na wózku na heder
+
+Dziennik zmian (1.0.0.2) :
+- ulepszony i zoptymalizowany kod
+- zaktualizowano descVersion
+- nowe zrzuty ekranu z gry
+- naprawiono drobne błędy
+- nowa ikona modu
+]]>
+</pl>
+    </description>
+
+    <extraSourceFiles>
+        <sourceFile filename="src/misc/AttachFix.lua"/>
+    </extraSourceFiles>
+</modDesc>
