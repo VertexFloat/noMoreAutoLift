@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="69">
-    <author>VertexFloat</author>
-    <version>1.0.0.2</version>
-    <title>
-        <en>No More Auto Lift</en>
-        <de>Kein Autolift Mehr</de>
-        <pl>Koniec Z Automatycznym Podnoszeniem</pl>
-    </title>
-    <iconFilename>icon.png</iconFilename>
-    <multiplayer supported="true"/>
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<modDesc descVersion='72'>
+	<author>VertexFloat</author>
+	<version>1.0.0.3</version>
+	<title>
+		<en>No More Auto Lift</en>
+		<de>Kein Autolift Mehr</de>
+		<pl>Koniec Z Automatycznym Podnoszeniem</pl>
+	</title>
+	<iconFilename>icon.png</iconFilename>
+	<multiplayer supported='true'/>
 
-    <description>
+	<description>
 <en>
 <![CDATA[Thanks to this simple modification, the implements remains on the ground when attached.
 
@@ -23,6 +23,12 @@ Changelog (1.0.0.2) :
 - descVersion updated
 - minor bugs fixed
 - new mod icon
+
+Changelog (1.0.0.3) :
+- new mod icon
+- cleaned code
+
+For more information, help, and report issues please visit <a href='https://github.com/4c65736975/FS22_NoMoreAutoLift'>GitHub</a>.
 ]]>
 </en>
 <de>
@@ -37,6 +43,12 @@ Changelog (1.0.0.2) :
 - neue Spiel-Screenshots
 - kleine Fehler behoben
 - Neues Mod-Symbol
+
+Änderungsprotokoll (1.0.0.3) :
+- Neues Mod-Symbol
+- gereinigter Code
+
+Weitere Informationen, Hilfe und Probleme melden finden Sie unter <a href='https://github.com/4c65736975/FS22_NoMoreAutoLift'>GitHub</a>.
 ]]>
 </de>
 <pl>
@@ -50,12 +62,18 @@ Dziennik zmian (1.0.0.2) :
 - zaktualizowano descVersion
 - nowe zrzuty ekranu z gry
 - naprawiono drobne błędy
-- nowa ikona modu
+- nowa ikona modyfikacji
+
+Dziennik zmian (1.0.0.3) :
+- nowa ikona modyfikacji
+- wyczyszczony kod
+
+Po więcej informacji, pomoc lub zgłoszenie błędu, odwiedź stronę <a href='https://github.com/4c65736975/FS22_NoMoreAutoLift'>GitHub</a>.
 ]]>
 </pl>
-    </description>
+	</description>
 
-    <extraSourceFiles>
-        <sourceFile filename="src/misc/AttachFix.lua"/>
-    </extraSourceFiles>
+	<extraSourceFiles>
+		<sourceFile filename='src/AttachFix.lua'/>
+	</extraSourceFiles>
 </modDesc>
