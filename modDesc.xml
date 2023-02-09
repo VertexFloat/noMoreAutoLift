@@ -77,6 +77,6 @@ Po więcej informacji, pomoc lub zgłoszenie błędu, odwiedź stronę <a href='
 	</description>
 
 	<extraSourceFiles>
-		<sourceFile filename='src/AttachFix.lua'/>
+		<sourceFile filename='src/NoMoreAutoLift.lua'/>
 	</extraSourceFiles>
 </modDesc>

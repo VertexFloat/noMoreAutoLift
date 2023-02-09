@@ -1,6 +1,6 @@
 -- @author: 4c65736975, All Rights Reserved
 -- @version: 1.0.0.3, 08/02/2023
--- @filename: AttachFix.lua
+-- @filename: NoMoreAutoLift.lua
 
 -- Changelog (1.0.0.1) :
 --
@@ -15,9 +15,11 @@
 --
 -- cleaned code
 
-AttachFix = {}
+NoMoreAutoLift = {}
 
-function AttachFix:loadMap(filename)
+local manualAttach = nil
+
+function NoMoreAutoLift:loadMap(filename)
 	self.isNotLowered = false
 	self.allowedJointTypes = nil
 
@@ -25,7 +27,7 @@ function AttachFix:loadMap(filename)
 	g_messageCenter:subscribe(MessageType.VEHICLE_RESET, self.onVehicleReset, self)
 end
 
-function AttachFix:update(dt)
+function NoMoreAutoLift:update(dt)
 	local controlledVehicle = g_currentMission.controlledVehicle
 
 	self.isNotLowered = false
@@ -43,7 +45,7 @@ function AttachFix:update(dt)
 	end
 end
 
-function AttachFix:setImplementsLoweredOnAttach(isManualAttach)
+function NoMoreAutoLift:setImplementsLoweredOnAttach(isManualAttach)
 	for _, vehicle in pairs(g_currentMission.vehicles) do
 		if vehicle ~= nil then
 			if SpecializationUtil.hasSpecialization(Attachable, vehicle.specializations) then
@@ -73,7 +75,7 @@ function AttachFix:setImplementsLoweredOnAttach(isManualAttach)
 	end
 end
 
-function AttachFix:onVehicleBought()
+function NoMoreAutoLift:onVehicleBought()
 	if manualAttach ~= nil then
 		self:setImplementsLoweredOnAttach(manualAttach.isEnabled)
 	else
@@ -81,7 +83,7 @@ function AttachFix:onVehicleBought()
 	end
 end
 
-function AttachFix:onVehicleReset()
+function NoMoreAutoLift:onVehicleReset()
 	if manualAttach ~= nil then
 		self:setImplementsLoweredOnAttach(manualAttach.isEnabled)
 	else
@@ -89,11 +91,11 @@ function AttachFix:onVehicleReset()
 	end
 end
 
-function AttachFix:onManualAttachModeChanged()
-	AttachFix:setImplementsLoweredOnAttach(manualAttach.isEnabled)
+function NoMoreAutoLift:onManualAttachModeChanged()
+	NoMoreAutoLift:setImplementsLoweredOnAttach(manualAttach.isEnabled)
 end
 
-function AttachFix:getIsAttachableObjectDynamicMounted(object)
+function NoMoreAutoLift:getIsAttachableObjectDynamicMounted(object)
 	for _, vehicle in pairs(g_currentMission.vehicles) do
 		if vehicle ~= nil then
 			if SpecializationUtil.hasSpecialization(DynamicMountAttacher, vehicle.specializations) then
@@ -109,7 +111,7 @@ function AttachFix:getIsAttachableObjectDynamicMounted(object)
 	return false
 end
 
-function AttachFix:getIsAttachableObjectPendingDynamicMount(object)
+function NoMoreAutoLift:getIsAttachableObjectPendingDynamicMount(object)
 	for _, vehicle in pairs(g_currentMission.vehicles) do
 		if vehicle ~= nil then
 			if SpecializationUtil.hasSpecialization(DynamicMountAttacher, vehicle.specializations) then
@@ -125,25 +127,25 @@ function AttachFix:getIsAttachableObjectPendingDynamicMount(object)
 	return false
 end
 
-function AttachFix:deleteMap()
+function NoMoreAutoLift:deleteMap()
 	g_messageCenter:unsubscribeAll(self)
 end
 
-addModEventListener(AttachFix)
+addModEventListener(NoMoreAutoLift)
 
 local function onFinishedLoading()
 	local isManualAttach = false
 
 	if g_modIsLoaded['FS22_manualAttach'] then
 		manualAttach = _G['FS22_manualAttach'].g_manualAttach
-		manualAttach.onManualAttachModeChanged = Utils.appendedFunction(manualAttach.onManualAttachModeChanged, AttachFix.onManualAttachModeChanged)
+		manualAttach.onManualAttachModeChanged = Utils.appendedFunction(manualAttach.onManualAttachModeChanged, NoMoreAutoLift.onManualAttachModeChanged)
 
-		AttachFix.allowedJointTypes = manualAttach.AUTO_ATTACH_JOINTYPES
+		NoMoreAutoLift.allowedJointTypes = manualAttach.AUTO_ATTACH_JOINTYPES
 
 		isManualAttach = manualAttach.isEnabled
 	end
 
-	AttachFix:setImplementsLoweredOnAttach(isManualAttach)
+	NoMoreAutoLift:setImplementsLoweredOnAttach(isManualAttach)
 end
 
 FSBaseMission.onFinishedLoading = Utils.prependedFunction(FSBaseMission.onFinishedLoading, onFinishedLoading)
@@ -181,7 +183,7 @@ local function attachImplementFromInfo(info)
 	local attacherVehicleJointDescIndex = info.spec_attacherJoints.attachableInfo.attacherVehicleJointDescIndex
 
 	if attacherVehicleJointDescIndex ~= nil then
-		if AttachFix.isNotLowered then
+		if NoMoreAutoLift.isNotLowered then
 			info:setJointMoveDown(attacherVehicleJointDescIndex, false, true)
 		end
 	end
