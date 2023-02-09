@@ -14,6 +14,7 @@
 -- Changelog (1.0.0.3) :
 --
 -- cleaned code
+-- improved compatibility with manualAttach version above 2.0.0.0
 
 NoMoreAutoLift = {}
 
@@ -138,11 +139,18 @@ local function onFinishedLoading()
 
 	if g_modIsLoaded['FS22_manualAttach'] then
 		manualAttach = _G['FS22_manualAttach'].g_manualAttach
-		manualAttach.onManualAttachModeChanged = Utils.appendedFunction(manualAttach.onManualAttachModeChanged, NoMoreAutoLift.onManualAttachModeChanged)
 
-		NoMoreAutoLift.allowedJointTypes = manualAttach.AUTO_ATTACH_JOINTYPES
+		if manualAttach == nil then
+			manualAttach = g_currentMission.manualAttach
+		end
 
-		isManualAttach = manualAttach.isEnabled
+		if manualAttach ~= nil then
+			manualAttach.onManualAttachModeChanged = Utils.appendedFunction(manualAttach.onManualAttachModeChanged, NoMoreAutoLift.onManualAttachModeChanged)
+
+			NoMoreAutoLift.allowedJointTypes = manualAttach.AUTO_ATTACH_JOINTYPES
+
+			isManualAttach = manualAttach.isEnabled
+		end
 	end
 
 	NoMoreAutoLift:setImplementsLoweredOnAttach(isManualAttach)
@@ -150,7 +158,7 @@ end
 
 FSBaseMission.onFinishedLoading = Utils.prependedFunction(FSBaseMission.onFinishedLoading, onFinishedLoading)
 
-local function onPostAttach(superFunc, attacherVehicle, inputJointDescIndex, jointDescIndex, loadFromSavegame)
+local function onPostAttach(self, superFunc, attacherVehicle, inputJointDescIndex, jointDescIndex, loadFromSavegame)
 	local spec = self.spec_attacherJointControl
 	local inputAttacherJoints = self:getInputAttacherJoints()
 
