@@ -21,7 +21,6 @@ NoMoreAutoLift = {}
 local manualAttach = nil
 
 function NoMoreAutoLift:loadMap(filename)
-	self.isNotLowered = false
 	self.allowedJointTypes = nil
 
 	g_messageCenter:subscribe(BuyVehicleEvent, self.onVehicleBought, self)
@@ -31,15 +30,15 @@ end
 function NoMoreAutoLift:update(dt)
 	local controlledVehicle = g_currentMission.controlledVehicle
 
-	self.isNotLowered = false
-
 	if controlledVehicle ~= nil then
 		if SpecializationUtil.hasSpecialization(AttacherJoints, controlledVehicle.specializations) then
 			local info = controlledVehicle.spec_attacherJoints.attachableInfo
 
+			info.isNotLowered = false
+
 			if info.attachable ~= nil then
 				if self:getIsAttachableObjectDynamicMounted(info.attachable) or self:getIsAttachableObjectPendingDynamicMount(info.attachable) then
-					self.isNotLowered = true
+					info.isNotLowered = true
 				end
 			end
 		end
@@ -191,7 +190,7 @@ local function attachImplementFromInfo(info)
 	local attacherVehicleJointDescIndex = info.spec_attacherJoints.attachableInfo.attacherVehicleJointDescIndex
 
 	if attacherVehicleJointDescIndex ~= nil then
-		if NoMoreAutoLift.isNotLowered then
+		if info.spec_attacherJoints.attachableInfo.isNotLowered then
 			info:setJointMoveDown(attacherVehicleJointDescIndex, false, true)
 		end
 	end
