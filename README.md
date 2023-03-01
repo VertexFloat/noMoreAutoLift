@@ -4,7 +4,7 @@
     <a href='https://github.com/4c65736975/noMoreAutoLift'>
         <img src='screenshots/icon.png' alt='Logo' width='128' height='128'>
     </a>
-    <h3>Cutter Fix</h3>
+    <h3>No More Auto Lift</h3>
     <p>
         Farming Simulator 22 Modification
         <br />
