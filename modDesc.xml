@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' standalone='no'?>
 <modDesc descVersion='72'>
 	<author>VertexFloat</author>
-	<version>1.0.0.3</version>
+	<version>1.0.0.4</version>
 	<title>
 		<en>No More Auto Lift</en>
 		<de>Kein Autolift Mehr</de>
@@ -30,6 +30,9 @@ Changelog (1.0.0.3) :
 - new mod icon
 - cleaned code
 
+Changelog (1.0.0.4) :
+- fixed compatibility with trailed implements
+
 For more information, help, and report issues please visit <a href='https://github.com/4c65736975/noMoreAutoLift'>GitHub</a>.
 ]]>
 </en>
@@ -52,6 +55,9 @@ For more information, help, and report issues please visit <a href='https://gith
 - Neues Mod-Symbol
 - gereinigter Code
 
+Änderungsprotokoll (1.0.0.4) :
+- Kompatibilität mit gezogenen Werkzeugen behoben
+
 Weitere Informationen, Hilfe und Probleme melden finden Sie unter <a href='https://github.com/4c65736975/noMoreAutoLift'>GitHub</a>.
 ]]>
 </de>
@@ -73,6 +79,9 @@ Dziennik zmian (1.0.0.3) :
 - zaktualizowano descVersion
 - nowa ikona modyfikacji
 - wyczyszczony kod
+
+Dziennik zmian (1.0.0.4) :
+- naprawiono kompatybilność z ciąganymi narzędziami
 
 Po więcej informacji, pomoc lub zgłoszenie błędu, odwiedź stronę <a href='https://github.com/4c65736975/noMoreAutoLift'>GitHub</a>.
 ]]>
