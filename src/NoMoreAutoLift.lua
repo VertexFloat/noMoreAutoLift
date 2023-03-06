@@ -1,5 +1,5 @@
 -- @author: 4c65736975, All Rights Reserved
--- @version: 1.0.0.3, 08/02/2023
+-- @version: 1.0.0.4, 07/03/2023
 -- @filename: NoMoreAutoLift.lua
 
 -- Changelog (1.0.0.1) :
@@ -15,6 +15,10 @@
 --
 -- cleaned code
 -- improved compatibility with manualAttach version above 2.0.0.0
+
+-- Changelog (1.0.0.4) :
+--
+-- fixed compatibility with trailed implements
 
 NoMoreAutoLift = {}
 
@@ -190,7 +194,21 @@ local function attachImplementFromInfo(info)
 	local attacherVehicleJointDescIndex = info.spec_attacherJoints.attachableInfo.attacherVehicleJointDescIndex
 
 	if attacherVehicleJointDescIndex ~= nil then
+		local isLowered = true
+
 		if info.spec_attacherJoints.attachableInfo.isNotLowered then
+			local isLowered = false
+		end
+
+		local childVehicle = info.childVehicles[1]
+
+		if childVehicle ~= nil then
+			if childVehicle.spec_foldable ~= nil then
+				isLowered, _ = childVehicle:getAllowsLowering()
+			end
+		end
+
+		if not isLowered then
 			info:setJointMoveDown(attacherVehicleJointDescIndex, false, true)
 		end
 	end
