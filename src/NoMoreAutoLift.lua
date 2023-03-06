@@ -204,7 +204,7 @@ local function attachImplementFromInfo(info)
 		end
 
 		if info.spec_attacherJoints.attachableInfo.isNotLowered then
-			local isLowered = false
+			isLowered = false
 		end
 
 		if not isLowered then
