@@ -194,12 +194,17 @@ local function attachImplementFromInfo(info)
 	local attacherVehicleJointDescIndex = info.spec_attacherJoints.attachableInfo.attacherVehicleJointDescIndex
 
 	if attacherVehicleJointDescIndex ~= nil then
-		local childVehicle = info.childVehicles[1]
 		local isLowered = true
 
-		if childVehicle ~= nil then
-			if childVehicle.spec_foldable ~= nil then
-				isLowered, _ = childVehicle:getAllowsLowering()
+		for i = 1, #info.childVehicles do
+			local childVehicle = info.childVehicles[i]
+
+			if childVehicle ~= nil then
+				if childVehicle.rootNode == info.spec_attacherJoints.attachableInfo.attachable.rootNode then
+					if childVehicle.spec_foldable ~= nil then
+						isLowered, _ = childVehicle:getAllowsLowering()
+					end
+				end
 			end
 		end
 
