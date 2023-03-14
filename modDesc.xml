@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' standalone='no'?>
-<modDesc descVersion='72'>
+<modDesc descVersion='73'>
 	<author>VertexFloat</author>
-	<version>1.0.0.4</version>
+	<version>1.0.0.5</version>
 	<title>
 		<en>No More Auto Lift</en>
 		<de>Kein Autolift Mehr</de>
@@ -33,6 +33,9 @@ Changelog (1.0.0.3) :
 Changelog (1.0.0.4) :
 - fixed compatibility with trailed implements
 
+Changelog (1.0.0.5) :
+- descVersion updated
+
 For more information, help, and report issues please visit <a href='https://github.com/4c65736975/noMoreAutoLift'>GitHub</a>.
 ]]>
 </en>
@@ -58,6 +61,9 @@ For more information, help, and report issues please visit <a href='https://gith
 Änderungsprotokoll (1.0.0.4) :
 - Kompatibilität mit gezogenen Werkzeugen behoben
 
+Änderungsprotokoll (1.0.0.5) :
+- descVersion aktualisiert
+
 Weitere Informationen, Hilfe und Probleme melden finden Sie unter <a href='https://github.com/4c65736975/noMoreAutoLift'>GitHub</a>.
 ]]>
 </de>
@@ -82,6 +88,9 @@ Dziennik zmian (1.0.0.3) :
 
 Dziennik zmian (1.0.0.4) :
 - naprawiono kompatybilność z ciąganymi narzędziami
+
+Dziennik zmian (1.0.0.5) :
+- zaktualizowano descVersion
 
 Po więcej informacji, pomoc lub zgłoszenie błędu, odwiedź stronę <a href='https://github.com/4c65736975/noMoreAutoLift'>GitHub</a>.
 ]]>
