@@ -1,101 +1,137 @@
 <?xml version='1.0' encoding='utf-8' standalone='no'?>
-<modDesc descVersion='73'>
+<modDesc descVersion='74'>
 	<author>VertexFloat</author>
-	<version>1.0.0.5</version>
+	<version>1.0.0.6</version>
 	<title>
 		<en>No More Auto Lift</en>
 		<de>Kein Autolift Mehr</de>
+		<fr>Fin De Levage Automatique</fr>
 		<pl>Koniec Z Automatycznym Podnoszeniem</pl>
 	</title>
-	<iconFilename>icon.png</iconFilename>
-	<multiplayer supported='true'/>
-
 	<description>
-<en>
-<![CDATA[Thanks to this simple modification, the implements remains on the ground when attached.
+		<en><![CDATA[Thanks to this simple modification, the implements remains on the ground when attached.
 
-Changelog (1.0.0.1) :
+Changelog (1.0.0.1):
 - improved attach behavior when header is on header trailer
 
-Changelog (1.0.0.2) :
+Changelog (1.0.0.2):
 - improved and optimized code
 - new game screenshots
 - descVersion updated
 - minor bugs fixed
 - new mod icon
 
-Changelog (1.0.0.3) :
+Changelog (1.0.0.3):
 - new game screenshots
 - descVersion updated
 - new mod icon
 - cleaned code
 
-Changelog (1.0.0.4) :
+Changelog (1.0.0.4):
 - fixed compatibility with trailed implements
 
-Changelog (1.0.0.5) :
+Changelog (1.0.0.5):
 - descVersion updated
 
-For more information, help, and report issues please visit <a href='https://github.com/4c65736975/noMoreAutoLift'>GitHub</a>.
-]]>
-</en>
-<de>
-<![CDATA[Dank dieser einfachen Modifikation bleiben die Anbaugeräte im angebauten Zustand am Boden.
+Changelog (1.0.0.6):
+- new mod icon
+- descVersion updated
+- improved and cleaned code
 
-Änderungsprotokoll (1.0.0.1) :
+For more information, help, and report issues please visit <a href='https://github.com/4c65736975/noMoreAutoLift'>GitHub</a>.]]></en>
+		<de><![CDATA[Dank dieser einfachen Modifikation bleiben die Anbaugeräte im angebauten Zustand am Boden.
+
+Änderungsprotokoll (1.0.0.1):
 - Verbessertes Attach-Verhalten, wenn sich der Schneidwerk auf dem Anhänger befindet
 
-Änderungsprotokoll (1.0.0.2) :
+Änderungsprotokoll (1.0.0.2):
 - verbesserter und optimierter Code
 - descVersion aktualisiert
 - neue Spiel-Screenshots
 - kleine Fehler behoben
 - Neues Mod-Symbol
 
-Änderungsprotokoll (1.0.0.3) :
+Änderungsprotokoll (1.0.0.3):
 - neue Spiel-Screenshots
 - descVersion aktualisiert
 - Neues Mod-Symbol
 - gereinigter Code
 
-Änderungsprotokoll (1.0.0.4) :
+Änderungsprotokoll (1.0.0.4):
 - Kompatibilität mit gezogenen Werkzeugen behoben
 
-Änderungsprotokoll (1.0.0.5) :
+Änderungsprotokoll (1.0.0.5):
 - descVersion aktualisiert
 
-Weitere Informationen, Hilfe und Probleme melden finden Sie unter <a href='https://github.com/4c65736975/noMoreAutoLift'>GitHub</a>.
-]]>
-</de>
-<pl>
-<![CDATA[Dzięki tej prostej modyfikacji narzędzia pozostają na ziemi po zamocowaniu.
+Änderungsprotokoll (1.0.0.6):
+- Neues Mod-Symbol
+- descVersion aktualisiert
+- verbesserter und bereinigter Code
 
-Dziennik zmian (1.0.0.1) :
+Weitere Informationen, Hilfe und Probleme melden finden Sie unter <a href='https://github.com/4c65736975/noMoreAutoLift'>GitHub</a>.]]></de>
+		<fr><![CDATA[Grâce à cette simple modification, les outils restent au sol lorsqu'ils sont attachés.
+
+Journal des modifications (1.0.0.1):
+- amélioration du comportement d'attachement lorsque l'en-tête est sur la remorque d'en-tête
+
+Journal des modifications (1.0.0.2):
+- code amélioré et optimisé
+- nouvelles captures d'écran du jeu
+- descriptionVersion mise à jour
+- bugs mineurs corrigés
+- nouvelle icône de module
+
+Journal des modifications (1.0.0.3):
+- nouvelles captures d'écran du jeu
+- descriptionVersion mise à jour
+- nouvelle icône de module
+- code nettoyé
+
+Journal des modifications (1.0.0.4):
+- compatibilité fixe avec les outils traînés
+
+Journal des modifications (1.0.0.5):
+- descriptionVersion mise à jour
+
+Journal des modifications (1.0.0.6):
+- nouvelle icône de module
+- descriptionVersion mise à jour
+- code amélioré et nettoyé
+
+Pour plus d'informations, de l'aide et signaler des problèmes, veuillez visiter <a href='https://github.com/4c65736975/noMoreAutoLift'>GitHub</a>.]]></fr>
+		<pl><![CDATA[Dzięki tej prostej modyfikacji narzędzia pozostają na ziemi po zamocowaniu.
+
+Dziennik zmian (1.0.0.1):
 - ulepszone zachowanie przyczepiania, gdy heder znajduje się na wózku na heder
 
-Dziennik zmian (1.0.0.2) :
+Dziennik zmian (1.0.0.2):
 - ulepszony i zoptymalizowany kod
 - zaktualizowano descVersion
 - nowe zrzuty ekranu z gry
 - naprawiono drobne błędy
 - nowa ikona modyfikacji
 
-Dziennik zmian (1.0.0.3) :
+Dziennik zmian (1.0.0.3):
 - nowe zrzuty ekranu z gry
 - zaktualizowano descVersion
 - nowa ikona modyfikacji
 - wyczyszczony kod
 
-Dziennik zmian (1.0.0.4) :
+Dziennik zmian (1.0.0.4):
 - naprawiono kompatybilność z ciąganymi narzędziami
 
-Dziennik zmian (1.0.0.5) :
+Dziennik zmian (1.0.0.5):
 - zaktualizowano descVersion
 
-Po więcej informacji, pomoc lub zgłoszenie błędu, odwiedź stronę <a href='https://github.com/4c65736975/noMoreAutoLift'>GitHub</a>.
-]]>
-</pl>
+Dziennik zmian (1.0.0.6):
+- nowa ikona modyfikacji
+- zaktualizowano descVersion
+- ulepszony i wyczyszczony kod
+
+Po więcej informacji, pomoc lub zgłoszenie błędu, odwiedź stronę <a href='https://github.com/4c65736975/noMoreAutoLift'>GitHub</a>.]]></pl>
 	</description>
+	<iconFilename>icon_noMoreAutoLift.png</iconFilename>
+	<multiplayer supported='true'/>
 
 	<extraSourceFiles>
 		<sourceFile filename='src/NoMoreAutoLift.lua'/>
