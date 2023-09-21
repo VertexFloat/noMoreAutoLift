@@ -53,9 +53,6 @@ local function getIsAttachableObjectPendingDynamicMount(object)
   return false
 end
 
----Attach implement from info
----@param self table
----@param info table attachable object
 local function attachImplementFromInfo(self, info)
   if info.attachable ~= nil then
     local attacherJoints = info.attacherVehicle.spec_attacherJoints.attacherJoints
