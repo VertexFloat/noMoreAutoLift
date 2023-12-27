@@ -19,9 +19,6 @@
 -- Changelog (1.0.0.5):
 -- cleaned and improved code
 
----Get if object to attach is mounted
----@param object table vehicle object
----@return boolean isMounted true if mounted, false if not
 local function getIsAttachableObjectDynamicMounted(object)
   for _, vehicle in pairs(g_currentMission.vehicles) do
     if vehicle ~= nil and SpecializationUtil.hasSpecialization(DynamicMountAttacher, vehicle.specializations) then
@@ -36,9 +33,6 @@ local function getIsAttachableObjectDynamicMounted(object)
   return false
 end
 
----Get if object to attach pending to be mounted
----@param object table vehicle object
----@return boolean isMounted true if pending to be mounted, false if not
 local function getIsAttachableObjectPendingDynamicMount(object)
   for _, vehicle in pairs(g_currentMission.vehicles) do
     if vehicle ~= nil and SpecializationUtil.hasSpecialization(DynamicMountAttacher, vehicle.specializations) then
