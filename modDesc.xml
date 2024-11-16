@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<modDesc descVersion="79">
+<modDesc descVersion="92" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/modDesc.xsd">
   <author>VertexFloat</author>
-  <version>1.0.0.6</version>
+  <version>1.0.0.7</version>
   <title>
     <en>No More Auto Lift</en>
     <de>Kein Autolift Mehr</de>
@@ -9,40 +9,32 @@
     <pl>Koniec Z Automatycznym Podnoszeniem</pl>
   </title>
   <description>
-    <en><![CDATA[Thanks to this simple modification, the implements remains on the ground when attached.
+    <en><![CDATA[Thanks to this modification, the implements remains on the ground when attached.
 
-Changelog (1.0.0.6):
-- new mod icon
-- descVersion updated
-- improved and cleaned code
+Changelog (1.0.0.7):
+- FS25 release
 
 For more information, full changelog, help, and report issues please visit <a href="https://github.com/VertexFloat/noMoreAutoLift">GitHub</a>.]]></en>
-    <de><![CDATA[Dank dieser einfachen Modifikation bleiben die Anbaugeräte im angebauten Zustand am Boden.
+    <de><![CDATA[Dank diese Modifikation bleibt das Anbaugerät im angebauten Zustand auf dem Boden.
 
-Änderungsprotokoll (1.0.0.6):
-- Neues Mod-Symbol
-- descVersion aktualisiert
-- verbesserter und bereinigter Code
+Änderungsprotokoll (1.0.0.7):
+- FS25-Version
 
 Weitere Informationen, ein vollständiges Änderungsprotokoll, Hilfe und das Melden von Problemen finden Sie unter <a href="https://github.com/VertexFloat/noMoreAutoLift">GitHub</a>.]]></de>
-    <fr><![CDATA[Grâce à cette simple modification, les outils restent au sol lorsqu'ils sont attachés.
+    <fr><![CDATA[Grâce à cette modification, l'outil reste au sol une fois attaché.
 
-Journal des modifications (1.0.0.6):
-- nouvelle icône de module
-- descriptionVersion mise à jour
-- code amélioré et nettoyé
+Journal des modifications (1.0.0.7):
+- Sortie de FS25
 
 Pour plus d'informations, le journal des modifications complet, l'aide et signaler des problèmes, veuillez visiter <a href="https://github.com/VertexFloat/noMoreAutoLift">GitHub</a>.]]></fr>
-    <pl><![CDATA[Dzięki tej prostej modyfikacji narzędzia pozostają na ziemi po zamocowaniu.
+    <pl><![CDATA[Dzięki tej modyfikacji narzędzia pozostają na ziemi po zamocowaniu.
 
-Dziennik zmian (1.0.0.6):
-- nowa ikona modyfikacji
-- zaktualizowano descVersion
-- ulepszony i wyczyszczony kod
+Dziennik zmian (1.0.0.7):
+- Wydanie FS25
 
 Po więcej informacji, pełny dziennik zmian, pomoc lub zgłoszenie błędu, odwiedź stronę <a href="https://github.com/VertexFloat/noMoreAutoLift">GitHub</a>.]]></pl>
   </description>
-  <iconFilename>icon_noMoreAutoLift.png</iconFilename>
+  <iconFilename>icon_noMoreAutoLift.dds</iconFilename>
   <multiplayer supported="true"/>
 
   <extraSourceFiles>
