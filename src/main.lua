@@ -55,3 +55,30 @@ local function attachImplementFromInfo(self, info)
 end
 
 AttacherJoints.attachImplementFromInfo = Utils.prependedFunction(AttacherJoints.attachImplementFromInfo, attachImplementFromInfo)
+
+local function onPostAttach(self, superFunc, attacherVehicle, inputJointDescIndex, jointDescIndex, loadFromSavegame)
+  local spec = self.spec_attacherJointControl
+  local inputAttacherJoints = self:getInputAttacherJoints()
+
+  if inputAttacherJoints[inputJointDescIndex] ~= nil and inputAttacherJoints[inputJointDescIndex].isControllable then
+    local attacherJoints = attacherVehicle:getAttacherJoints()
+    local jointDesc = attacherJoints[jointDescIndex]
+
+    jointDesc.allowsLoweringBackup = jointDesc.allowsLowering
+    jointDesc.allowsLowering = false
+    jointDesc.upperRotationOffsetBackup = jointDesc.upperRotationOffset
+    jointDesc.lowerRotationOffsetBackup = jointDesc.lowerRotationOffset
+
+    spec.jointDesc = jointDesc
+
+    for _, control in ipairs(spec.controls) do
+      control.moveAlpha = control.func(self)
+    end
+
+    spec.heightTargetAlpha = spec.jointDesc.lowerAlpha
+
+    self:requestActionEventUpdate()
+  end
+end
+
+AttacherJointControl.onPostAttach = Utils.overwrittenFunction(AttacherJointControl.onPostAttach, onPostAttach)
